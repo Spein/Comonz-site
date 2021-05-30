@@ -13,7 +13,8 @@ async function getIdfromToken(token) {
         return snapshot.val()
     })
 }
-let userId = await firebase.database().ref('tokens/' + token + '/userId').once('value').then(function(snapshot) {
+let userId = await firebase.database().ref('tokens/' + token).once('value').then(function(snapshot) {
+    console.log(snapshot.val())
     return snapshot.val()
 });
 let userDetails = await firebase.database().ref('users/' + userId).once('value').then(function(snapshot) {

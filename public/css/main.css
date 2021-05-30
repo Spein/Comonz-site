@@ -250,10 +250,7 @@ select {
 
 #blackhole {
     z-index: -1;
-    height: 50%;
-    width: 50%;
-    left: 16%;
-    top: 12%;
+    top: 2%;
     position: absolute;
 }
 
