@@ -163,7 +163,7 @@ export function blackhole(element, count, gh, gw, maxOrbit) {
         var now = new Date().getTime();
         currentTime = (now - startTime) / 50;
 
-        context.fillStyle = 'rgba(251, 51, 51,0.93)'; // somewhat clear the context, this way there will be trails behind the stars 
+        context.fillStyle = 'rgba(252, 92, 92,1)'; // somewhat clear the context, this way there will be trails behind the stars
         context.fillRect(0, 0, cw, ch);
 
         for (var i = 0; i < stars.length; i++) { // For each star
@@ -193,7 +193,7 @@ export function blackhole(element, count, gh, gw, maxOrbit) {
 
 
     function updateStar(i) {
-        if (i <40) {
+        if (i < 40) {
             new star()
         }
 
