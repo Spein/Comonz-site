@@ -42,7 +42,8 @@
     <script type="text/javascript" src="/js/app.js"></script>
     <!-- Open Sans for body and title font -->
     <script type="module" src="/js/blackhole.js"></script>
-
+    <script src="/js/firebase/firebase-app.js"></script>
+    <script src="/js/firebase/firebase-database.js"></script>
     <script type="module" src="/js/custom.js"></script>
     <script src="https://kit.fontawesome.com/61d300521c.js" crossorigin="anonymous"></script>
 
@@ -92,11 +93,19 @@
                             <p>Easily Fund your Favorite Creators or any Type of Digital Work of Arts <br> Tokenize your community on the blockchain  </p>
 
                             <div class="mu-app-download-area">
-                                <h4>Download The Extension</h4>
-                                <a class="mu-apple-btn" href="#"><i class="fab fa-chrome"
+                                <h4><i class="fas fa-rocket" aria-hidden="true" style="padding: 0 0.41vw;"></i>BETA LAUNCHED!</h4>
+                                <form id='buttonWithText' onSubmit={this.onSubmit}>
+                                    <p id="notemail"></p>
+                                    <div id='slider' class='collapsed'>
+                                      <input type='button' id='toggle' value='Count me in!'>
+                                      <input type='text' id='input' tabindex='-1' placeholder='excitedtester@email.us' size=10>
+                                      <button type='submit' id='ok' tabindex='-1' value='ok'><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                                    </div>
+                                  </form>
+                               <!--  <a class="mu-apple-btn" href="#"><i class="fab fa-chrome"
                                         aria-hidden="true"></i><span>chrome</span></a>
                                 <a class="mu-google-btn" href="#"><i class="fab fa-firefox"
-                                        aria-hidden="true"></i><span>firefox</span></a>
+                                        aria-hidden="true"></i><span>firefox</span></a> -->
                                 <!-- <a class="mu-windows-btn" href="#"><i class="fa fa-windows"></i><span>windows store</span></a> -->
                             </div>
 
@@ -134,7 +143,7 @@
                                 <div class="row">
                                     <div class="col-md-12" id="spirit-img">
                                         <div class="mu-feature-content-left" id="logo-container">
-                                            <img class="rotating" src="/images/logos/logo-colour.svg" alt="">
+                                            <img class="rotating" style="max-height:max-content"src="/images/logos/logo-colour.svg" alt="">
 
                                         </div>
                                     </div>
@@ -225,7 +234,7 @@
         <!-- End Feature -->
 
         <!-- Start Video -->
-        <section id="mu-video">
+<!--         <section id="mu-video">
             <div class="mu-video-overlay">
                 <div class="container">
                     <div class="row">
@@ -267,11 +276,9 @@
                 </div>
             </div>
 
-            <!-- Start Video content -->
 
-            <!-- End Video content -->
 
-        </section>
+        </section> -->
         <!-- End Video -->
 
         <!-- Start Apps Screenshot -->
@@ -283,9 +290,9 @@
                         <div class="mu-apps-screenshot-area">
 
                             <div class="mu-title-area">
-                                <h2 class="mu-title">HOW IT LOOKS</h2>
+                                <h2  class="mu-title" style="color: white;">HOW IT LOOKS</h2>
                                 <span class="mu-title-dot"></span>
-                                <p>A "Profile" tab for your general information, a "Wallet" tab concerning your wallet configuration and a "Creator" tab for those who want to get supported through the system. We just provide <strong>minimalistic, flexible and efficient</strong>                                    tool to fund your favorite creators.</p>
+                                <p style="color: white;">A "Profile" tab for your general information, a "Wallet" tab concerning your wallet configuration and a "Creator" tab for those who want to get supported through the system. We just provide <strong>minimalistic, flexible and efficient</strong>                                    tool to fund your favorite creators.</p>
                             </div>
 
 
@@ -491,7 +498,7 @@
 
 
         <!-- Start Contact -->
-        <section id="mu-contact">
+        <!-- <section id="mu-contact">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -502,10 +509,6 @@
                                 <span class="mu-title-dot"></span>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
                             </div>
-
-
-
-                            <!-- Start Contact Content -->
                             <div class="mu-contact-content">
                                 <div class="row">
 
@@ -554,11 +557,7 @@
 
                                             <div class="mu-contact-right-single">
                                                 <div class="mu-social-media">
-                                                    <!-- <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                                                <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                                                    <a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a>
-                                                    <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                                                    <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a> -->
+
                                                 </div>
                                             </div>
 
@@ -567,13 +566,12 @@
 
                                 </div>
                             </div>
-                            <!-- End Contact Content -->
 
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- End Contact -->
 
     </main>

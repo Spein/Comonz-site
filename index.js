@@ -31,6 +31,18 @@ app.get("/commoner/:token", function(req, res) {
 app.get("/youtube-connect", function(req, res) {
     res.render("youtubeConnect");
 });
+
+app.get("/sndbx/author1", function(req, res) {
+    res.render("author1");
+});
+app.get("/sndbx/author2", function(req, res) {
+    res.render("author2");
+});
+app.get("/sndbx/author3", function(req, res) {
+    res.render("author3");
+});
+
+
 app.get("/firefox-checkout", function(req, res) {
     res.render("firefoxCheckout");
 });

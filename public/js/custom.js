@@ -18,66 +18,22 @@
 
 import * as blackhole from './blackhole.js';
 
+let config = {
+    apiKey: "AIzaSyD2klYcbAMpTYbDvxc5XVPXeT7ppRegJzU",
+    authDomain: "comonz-sandbox.firebaseapp.com",
+    databaseURL: "https://comonz-sandbox-default-rtdb.firebaseio.com",
+    projectId: "comonz-sandbox",
+    storageBucket: "comonz-sandbox.appspot.com",
+    messagingSenderId: "241744572164",
+    appId: "1:241744572164:web:ab4debb703cc6ca42daa51"
+};
+
 
 
 
 (function($) {
+    firebase.initializeApp(config);
 
-    class ProgressRing extends HTMLElement {
-        constructor() {
-            super();
-            const stroke = this.getAttribute('stroke');
-            const radius = this.getAttribute('radius');
-            const normalizedRadius = radius - stroke * 2;
-            this._circumference = normalizedRadius * 2 * Math.PI;
-
-            this._root = this.attachShadow({ mode: 'open' });
-            this._root.innerHTML = `
-			<svg
-			  height="${radius * 2}"
-              width="${radius * 2}"              
-
-
-			 >
-			   <circle
-				 stroke="#ff5a60"
-				 stroke-dasharray="${this._circumference} ${this._circumference}"
-				 style="stroke-dashoffset:${this._circumference}"
-				 stroke-width="${stroke}"
-				 fill="transparent"
-				 r="${normalizedRadius}"
-				 cx="${radius}"
-				 cy="${radius}"
-			  />
-			</svg>
-	  
-			<style>
-			  circle {              
-                             
-				transition: stroke-dashoffset 0.35s;
-				transform: rotate(-90deg);
-				transform-origin: 50% 50%;
-			  }
-			</style>
-		  `;
-        }
-
-        setProgress(percent) {
-            const offset = this._circumference - (percent * this._circumference);
-            const circle = this._root.querySelector('circle');
-            circle.style.strokeDashoffset = offset;
-        }
-
-        static get observedAttributes() {
-            return ['progress'];
-        }
-
-        attributeChangedCallback(name, oldValue, newValue) {
-            if (name === 'progress') {
-                this.setProgress(newValue);
-            }
-        }
-    }
 
 
 
@@ -232,7 +188,7 @@ import * as blackhole from './blackhole.js';
 
 
     /* ----------------------------------------------------------- */
-    /*  5. BOOTSTRAP ACCORDION 
+    /*  5. BOOTSTRAP ACCORDION
     /* ----------------------------------------------------------- */
 
     /* Start for accordion #1*/
@@ -251,3 +207,47 @@ import * as blackhole from './blackhole.js';
 
 
 })(jQuery);
+
+function expand() {
+    slider.className = 'expanded';
+    setTimeout(function() {
+        input.focus();
+    }, 500);
+}
+
+function collapse() {
+    slider.className = 'collapsed';
+    input.blur();
+}
+
+toggle.onclick = expand;
+
+input.onblur = function() {
+    setTimeout(collapse, 100);
+}
+
+buttonWithText.onsubmit = function(e) {
+    e.preventDefault();
+    let date = new Date()
+    var parsedDate = JSON.stringify(date);
+    if (validateEmail(input.value)) {
+        firebase.database().ref('beta').push({
+            email: input.value,
+            date: parsedDate
+        }).then(
+            alert("Thanks for your interest. We'll come back to you soon "),
+            collapse())
+
+    } else {
+        alert("You have entered an invalid email address!")
+    }
+
+
+}
+
+function validateEmail(email) {
+    if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
+        return (true)
+    }
+    return (false)
+}

@@ -172,6 +172,47 @@ button:focus {
     border: none;
 }
 
+#buttonWithText {
+    overflow: hidden;
+    width: 19vw;
+}
+
+#slider {
+    display: flex;
+    width: 200%;
+    transition: 0.5s;
+}
+
+#slider.expanded {
+    transform: translateX(-50%);
+}
+
+#toggle {
+    flex: 0 0 50%;
+    max-width: 8vw;
+    margin-left: 6vw;
+    margin-right: 8vw;
+    border-radius: 10vw;
+    border: 2px solid white;
+    color: white;
+    background: #fc5c5c;
+}
+
+#input {
+    flex: auto;
+    text-align-last: center;
+}
+
+#ok {
+    flex: none;
+    background: none;
+    color: white;
+    border: 1px solid;
+    margin-left: 2%;
+    border-radius: 38px;
+    width: 3.4vw;
+}
+
 #spirit-img {
     background-repeat: no-repeat;
     background-size: contain;
@@ -267,12 +308,11 @@ button:focus {
 /*--------------------*/
 
 #logo-container {
-    background: #ffffff4a;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 658px;
+    justify-content: flex-end;
+    float: left;
+    flex-direction: row;
+    min-height: 3vh;
     min-width: 599px;
     margin-left: -5%;
 }
@@ -448,10 +488,11 @@ button:focus {
 }
 
 .mu-app-download-area {
-    display: inline;
-    float: left;
+    display: flex;
     margin-top: 50px;
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mu-app-download-area h4 {
@@ -892,7 +933,7 @@ button:focus {
 /*--------------------*/
 
 #mu-apps-screenshot {
-    background-color: #fff;
+    background-color: #545454;
     display: inline;
     float: left;
     width: 100%;
@@ -1269,12 +1310,11 @@ button:focus {
     -webkit-animation: spin 15s linear infinite;
     -moz-animation: spin 15s linear infinite;
     animation: spin 15s linear infinite;
-    width: 17vw;
-    margin-top: -24%;
+    width: 61vw;
+    margin-top: -12%;
     display: flex;
-    align-self: center;
-    margin-right: -8%;
-    opacity: 0.3;
+    margin-right: -49%;
+    opacity: 0.1;
 }
 
 @-moz-keyframes spin {
