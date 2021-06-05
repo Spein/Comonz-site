@@ -827,6 +827,7 @@ button:focus {
 
 .pleine {
     width: 100vw;
+    padding: 3%;
 }
 
 .demi {
@@ -894,6 +895,9 @@ button:focus {
 @media screen and (max-width: 900px) {
     .demi {
         width: 95vw;
+    }
+    #toggle {
+        max-width: 26vw;
     }
 }
 
