@@ -193,8 +193,9 @@ Version: 1.0
 
     #input {
         flex: auto;
-        font-size: 12px;
+        font-size: 1rem;
         text-align-last: center;
+        color: black
     }
 
     #ok {
