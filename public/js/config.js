@@ -1,8 +1,9 @@
 export let config = {
-    apiKey: 'AIzaSyAdxBw7BVvGgtp0PliC5y_xXPfv35nDEuw',
-    authDomain: 'pressformore-c0045.firebaseapp.com',
-    databaseURL: 'https://pressformore-c0045.firebaseio.com',
-    projectId: 'pressformore-c0045',
-    storageBucket: 'pressformore-c0045.appspot.com',
-    messagingSenderId: '1059781682708'
+    apiKey: "AIzaSyD2klYcbAMpTYbDvxc5XVPXeT7ppRegJzU",
+    authDomain: "comonz-sandbox.firebaseapp.com",
+    databaseURL: "https://comonz-sandbox-default-rtdb.firebaseio.com",
+    projectId: "comonz-sandbox",
+    storageBucket: "comonz-sandbox.appspot.com",
+    messagingSenderId: "241744572164",
+    appId: "1:241744572164:web:ab4debb703cc6ca42daa51"
 };
