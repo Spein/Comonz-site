@@ -35,8 +35,8 @@ app.get("/youtube-connect", function(req, res) {
 app.get("/sndbx/author1", function(req, res) {
     res.render("author1");
 });
-app.get("/sndbx/author2", function(req, res) {
-    res.render("author2");
+app.get("/sndbx/author20", function(req, res) {
+    res.render("author20");
 });
 app.get("/sndbx/author3", function(req, res) {
     res.render("author3");
