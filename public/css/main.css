@@ -762,7 +762,47 @@ p.tr-title {
         transform: rotateZ(1turn);
     }
 }
+ #bédé {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
+        #bd-canvas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 10vw 27vw 10vw;
+            gap: 29px;
+            max-width: 80%;
+        }
+
+        .bd-box {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0;
+
+        }
+
+        .bordered {
+            border: #545454 solid 2px;
+        }
+
+        .bd-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .caption {
+            font-size: 1.1vw;
+            text-align: justify;
+            padding: 2%;
+        }
 label {
     display: block;
     font-size: 13px;
